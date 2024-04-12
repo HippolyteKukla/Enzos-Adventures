@@ -1,0 +1,3 @@
+En chemin vers l'auberge, vous rencontrez un petit groupe de rats. Leur apparence appétissante n'échappe pas à votre regard, surtout en ces temps de disette où la faim sévit. Les vivres se font rares, et ces rats semblent être une option de repas des plus tentantes.
+
+ue voulez-vous faire ? Continuer votre route vers l'auberge ou partir à la chasse aux rats ?

@@ -1,0 +1,3 @@
+Vous décidez de poursuivre votre route. Durant plusieurs heures, vous parcourrez les multiples couloirs dans le but de trouver la sortie qui mène jusqu'au château mais impossible ! Vous finissez par vous perdre et face à cet échec cuisant, vos fidèles perdent confiance en vous et décident de repartir chacun de son côté. Votre armée se désagrège et vous vous retrouvez bientôt complètement seul. Vous remarquez d'ailleurs qu'en cours de route, vous avez perdu votre précieuse statuette.
+
+Voulez-vous allez à droite, à gauche ou tout droit ?
