@@ -37,7 +37,7 @@ script.AddPlaneClickable(
 );
 
 scene.end = function(){
-  script.EndFind(14)
+  script.EndFind(16)
 }
 
 // Ajouter la scène à la liste des scènes disponibles

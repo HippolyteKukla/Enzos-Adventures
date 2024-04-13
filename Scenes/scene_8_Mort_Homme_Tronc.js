@@ -2,7 +2,6 @@ import * as script from "../script.js";
 const scene = new THREE.Scene();
 scene.name = "scene_8_Mort_Homme_Tronc";
 scene.texte = "scene_8.txt";
-scene.BackSoundName="Croquer_doigt";
 scene.notMain=true;
 scene.notLivre = true;
 scene.noFleche = true;

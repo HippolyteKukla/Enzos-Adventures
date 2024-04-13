@@ -2,6 +2,7 @@ import * as script from "../script.js";
 const scene = new THREE.Scene();
 scene.name = "scene_-1_Work_In_Progress";
 scene.notMain=true;
+scene.texte = "scene_-1.txt";
 
 const nbPlane = 1;
 const tabPlaneName = ["background"];

@@ -21,7 +21,7 @@ scene.tabHaut = [
   {func: script.egout, args:[scene.name, 1] },
   {func: script.egout, args:[scene.name, 4] },
   {func: script.egout, args:[scene.name, 4] },
-  {func: script.changerScene, args:[64] }]
+  {func: script.theEnd, args:[64] }]
   
 const nbPlane = 5;//Nombre de plane à ajouter
 const tabPlaneName = ["background", "fleche_gauche", "fleche_haut", "fleche_droite", "chat"];

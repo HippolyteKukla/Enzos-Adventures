@@ -34,6 +34,9 @@ script.AddPlaneClickable(
   tabFonction,
 );
 
+scene.actualisation = function () {
+  script.PlayAudio("Choc", null, 300)
+}
 
 // Ajouter la scène à la liste des scènes disponibles
 script.addScenes(scene);

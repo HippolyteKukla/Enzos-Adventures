@@ -27,8 +27,8 @@ const tabFonction = [{ type: null, value: null },
 //Fonction de Création de chaque plane. Seul l'arg scene est obligatoire.
 script.AddPlaneClickable(scene, nbPlane, tabPlaneName, undefined, undefined, tabScale, tabPosX, tabPosY, tabPosZ, tabTextureOrColor, undefined, undefined, tabFonction);
 
-scene.actualisation = function () {
-  script.PlayAudio("Choc")
+scene.actualisation = function (){
+  script.changementMain(1)
 }
 
 // Ajouter la scène à la liste des scènes disponibles

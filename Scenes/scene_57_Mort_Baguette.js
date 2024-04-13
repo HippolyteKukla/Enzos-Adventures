@@ -40,7 +40,7 @@ scene.actualisation = function () {
 }
 
 scene.end = function(){
-  script.EndFind(10)
+  script.EndFind(11)
 }
 
 // Ajouter la scène à la liste des scènes disponibles

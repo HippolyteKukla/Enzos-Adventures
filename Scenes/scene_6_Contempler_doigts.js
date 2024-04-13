@@ -11,7 +11,7 @@ const tabPlaneName = ["background", "fleche_droite"];
 const tabPosX = [0, 105];
 const tabPosY = [0, -10];
 const tabPosZ = [0, 0.5];
-const tabPlaneScale = [1.33, 0.7];
+const tabPlaneScale = [1, 0.7];
 
 
 const tabTextureOrColor = [

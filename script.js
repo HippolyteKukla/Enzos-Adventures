@@ -117,7 +117,7 @@ export function Init() {
   chargerTextureQuestion();
   chargerTextureDe();
   setTimeout(function () {
-    theEnd(1)
+    theEnd(60)
   }, 10000);
 }
 
@@ -185,7 +185,9 @@ export function changerScene(nouvelleSceneIndex) {
 
 // Fonction pour revenir à la scène précédente
 export function revenirScene() {
+  console.log("ok")
   if (CheminScene.length > 1) {
+    console.log("ok")
     CheminScene.pop();
   } else {
     //trouve le secret Remonter dans le temps, Satan
@@ -668,7 +670,7 @@ export function Timer() {
     if (getLastScene().name == "scene_36_Cercueil") theEnd(37);
 
     if (getLastScene().name == "scene_53_Foetus") theEnd(54);
-  }, 10000);
+  }, 15000);
 }
 
 export function lancerSort(index) {
@@ -917,10 +919,15 @@ function ChooseQAA(plane0, plane1, question = null) {
 }
 
 export function startTimer(remainingTime, scene) {
-  (scene.BackSoundName = "question-qui-veut-gagner-des-millions"),
-    console.log("Timer de " + remainingTime + "s est lancé !");
+  if (timer)
+    return console.log("Timer déjà lancé !");
+  
+  scene.BackSoundName = "question-qui-veut-gagner-des-millions";
+  console.log("Timer de " + remainingTime + "s est lancé !");
+  
   timer = setInterval(() => {
     remainingTime--;
+    console.log("Il reste : "+remainingTime)
 
     if (remainingTime == 6) {
       console.log("Il reste " + remainingTime + " secondes !");

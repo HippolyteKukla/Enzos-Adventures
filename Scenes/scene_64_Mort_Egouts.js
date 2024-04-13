@@ -19,7 +19,7 @@ const tabFonction = [{ type: 'changerscene', value: 1 }];
 script.AddPlaneClickable(scene, nbPlane, tabPlaneName, undefined, undefined, undefined, undefined, undefined, undefined, tabTextureOrColor, undefined, undefined, tabFonction);
 
 scene.end = function () {
-  script.EndFind(12);
+  script.EndFind(13);
 };
 
 // Ajouter la scène à la liste des scènes disponibles

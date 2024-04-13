@@ -1,7 +1,7 @@
 import * as script from '../script.js';
 const scene = new THREE.Scene();
 scene.name = "scene_48_Cagibi_Ouvert";
-scene.texte = "scene_49.txt";
+scene.texte = "scene_48.txt";
 
 const nbPlane = 4;
 const tabPlaneName = ["background","droite", "gauche", "chat"];
