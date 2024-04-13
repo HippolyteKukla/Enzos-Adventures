@@ -919,7 +919,7 @@ function ChooseQAA(plane0, plane1, question = null) {
 }
 
 export function startTimer(remainingTime, scene) {
-  console
+  console.log("probleme");
   if (timer)
     return console.log("Timer déjà lancé !");
   
