@@ -18,6 +18,7 @@ let texturesEgout = [];
 export let goodAnswers = -1;
 let numerosTires = new Set();
 let timer;
+let timerRunning = false;
 let camera; // Déclarez la variable camera
 
 //code pour initialiser le renderer:
@@ -82,7 +83,7 @@ const pathsSounds = [
   
 ];
 export let currentBackSoundName = null;
-let currentSoundName = null;
+export let currentSoundName = null;
 
 //Parametre texte
 // Création du canvas pour le texte
@@ -139,7 +140,7 @@ export function afficherScene(
 
   console.log("CheminScene : " + CheminScene);
   renderer.render(currentScene, camera);
-
+  console.log(currentScene.BackSoundName)
   if (currentScene.BackSoundName) {
     if (currentBackSoundName !== currentScene.BackSoundName) {
       PlayAudio(currentScene.BackSoundName, undefined, undefined, true);
@@ -663,14 +664,20 @@ export function placeTomi(value) {
 }
 
 export function Timer() {
-  clearTimeout(timer);
+  clearInterval(timer);
+  timerRunning = false
+  
+  if (!timerRunning){
+    timerRunning = true;
+    if (getLastScene().name == "scene_36_Cercueil") PlayAudio("DingDong", 1, 400)
+    timer = setTimeout(() => {
+      if (getLastScene().name == "scene_36_Cercueil") theEnd(37);
 
-  if (getLastScene().name == "scene_36_Cercueil") PlayAudio("DingDong", 1, 400)
-  timer = setTimeout(() => {
-    if (getLastScene().name == "scene_36_Cercueil") theEnd(37);
+      if (getLastScene().name == "scene_53_Foetus") theEnd(54);
 
-    if (getLastScene().name == "scene_53_Foetus") theEnd(54);
-  }, 15000);
+      timerRunning = false;
+    }, 12000);
+  }
 }
 
 export function lancerSort(index) {
@@ -784,8 +791,7 @@ export function InitQuestionsGame(sceneName) {
   numerosTires = new Set();
 
   const scene = getSceneByName(sceneName);
-
-  scene.BackSoundName = null;
+ 
   const startPlane = scene.getObjectByName("plane_start");
   const startTexturePlane = scene.getObjectByName("plane_texture_start");
   startPlane.userData.isClickable = false;
@@ -808,8 +814,6 @@ export function InitQuestionsGame(sceneName) {
   plane1.userData.onClick = function () {
     CheckAnswer(plane1, plane0, scene);
   };
-
-  changerScene(0);
   ChooseQAA(plane0, plane1, 0);
 }
 
@@ -826,7 +830,6 @@ function CheckAnswer(clickPlane, notClickPlane, scene) {
     } else {
       ChooseQAA(clickPlane, notClickPlane);
     }
-    changerScene(0);
   } else {
     console.log("mauvaise réponse");
     ReStartGame(scene);
@@ -907,28 +910,29 @@ function ChooseQAA(plane0, plane1, question = null) {
       plane0.userData.answer = false;
       plane1.userData.answer = false;
     }
+    
     plane0.material.needsUpdate = true;
     plane1.material.needsUpdate = true; 
     renderer.render(currentScene, camera);
-    stopTimer();
     console.log("Question : " + question + " answer : " + answer);
-    chargerTexte("Ressources/Textes_Quiz/question_"+question+".txt", "scene_0_Livre")
+    getSceneByName("scene_60_Questions_Game").texte="question_"+question+".txt";
+    getSceneByName("scene_60_Questions_Game").BackSoundName=null;
+    changerScene(0)
   } else {
     console.error("Erreur lors du choix des questions", error);
   }
 }
 
 export function startTimer(remainingTime, scene) {
-  console.log("probleme");
-  if (timer)
-    return console.log("Timer déjà lancé !");
+
+  if (timerRunning)
+    return console.log("Timer is already running");
   
   scene.BackSoundName = "question-qui-veut-gagner-des-millions";
   console.log("Timer de " + remainingTime + "s est lancé !");
-  
+  timerRunning = true;
   timer = setInterval(() => {
     remainingTime--;
-    console.log("Il reste : "+remainingTime)
 
     if (remainingTime == 6) {
       console.log("Il reste " + remainingTime + " secondes !");
@@ -958,6 +962,7 @@ export function startTimer(remainingTime, scene) {
 
 function stopTimer() {
   clearInterval(timer); // Arrêter le timer lorsque le temps est écoulé
+  timerRunning = false;
 }
 
 ///--------------------------------------Audio--------------------------------------

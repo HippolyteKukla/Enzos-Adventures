@@ -16,7 +16,7 @@ const tabPlaneName = [
 ];
 
 const tabPosX = [0, -6, 0, -35, 35, 0];
-const tabPosY = [0, 20, -10, -10, -10, -30];
+const tabPosY = [0, 20, -10, -8, -8, -30];
 const tabPosZ = [0, 0.5, 0.7, 0.6, 0.6, -1];
 
 const tabPlaneWidth = [null, null, 20];
@@ -24,7 +24,7 @@ const tabPlaneHeight = [null, null, 9.5];
 
 const tabOpacity = [1, 1, 0, 0, 0, 0];
 
-const tabPlaneScale = [1, 1, 5, 0.2, 0.2, 0.3];
+const tabPlaneScale = [1, 1, 5, 0.2, 0.2, 0.45];
 
 const tabTextureOrColor = [
   { type: "texture", path: "Ressources/Images/background/questions_game.png" }, //Image

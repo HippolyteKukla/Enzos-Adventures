@@ -3,7 +3,7 @@ const scene = new THREE.Scene();
 scene.name = "scene_0_Livre";
 scene.notLivre = true;
 scene.notMain = true;
-scene.BackSoundName = script.currentBackSoundName;
+scene.BackSoundName = null;
 
 
 // Nombre de planes dans le tableau
@@ -113,9 +113,11 @@ script.AddPlaneClickable(scene, nbPlane, tabPlaneName, undefined, undefined, tab
 
 
 scene.actualisation = function () {
+  
   const fleche = script.getSceneByName(scene.name).getObjectByName("fleche_gauche_livre");
 
   const lastScene = script.getLastScene();
+  scene.BackSoundName=lastScene.BackSoundName
   
   if (fleche.position.z != 0.6){
     fleche.position.z = 0.6;
