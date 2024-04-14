@@ -26,6 +26,7 @@ Mindmap des scénarios :
 https://mm.tt/app/map/3180555753?t=s4hBOozTjO
 
 Lien vidéo de démonstration : 
+https://www.youtube.com/watch?v=-0ut1NPoLFs
 Vidéo de Stanek Kukla
 
 
