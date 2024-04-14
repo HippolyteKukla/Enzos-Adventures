@@ -1,4 +1,4 @@
-22; //Déclaration des variables de Scenes
+//Déclaration des variables de Scenes
 let scenes = [];
 let currentSceneIndex = -1;
 let currentScene = scenes[currentSceneIndex];
