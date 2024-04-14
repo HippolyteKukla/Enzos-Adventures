@@ -29,4 +29,5 @@ Lien vidéo de démonstration :
 Vidéo de Stanek Kukla
 
 
-Bugs connus.
+Bugs connus :
+Dans le cas d'un ordinateur lent, le chargement des différents éléments peut ne pas être fini lors du premier affichage du jeu, un rechargement de la page suffit à régler le problème.
