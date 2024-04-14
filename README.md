@@ -22,7 +22,11 @@ De manière générale, nous avons tous contribué sur chaque aspect puisque les
 
 Technoligies utilisées : three.js / Photoshop / MindMap
 
-Lien vidéo de démonstration et mindmap.
+Mindmap des scénarios :
+https://mm.tt/app/map/3180555753?t=s4hBOozTjO
+
+Lien vidéo de démonstration : 
 Vidéo de Stanek Kukla
+
 
 Bugs connus.
