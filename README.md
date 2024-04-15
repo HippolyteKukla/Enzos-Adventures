@@ -1,4 +1,4 @@
-Enzo's Adventures !
+**Enzo's Adventures !**
 
 
   Découvrez notre nouveau jeu d'aventure palpitant ! Avec des choix à faire à chaque étape, vous mènerez votre personnage à travers des péripéties passionnantes, du fin fond des égouts jusqu'à la chevauchée d'un dragon. Programmé sur three.js et illustré par notre équipe, plongez dans un monde captivant où vos décisions façonnent votre destinée !
@@ -20,7 +20,9 @@ Corentin Piccin : Polyvalent -> Corentin a contribué sur les trois aspects du j
 
 De manière générale, nous avons tous contribué sur chaque aspect puisque les décisions étaient prises collectivement. Lorsqu'une idée de scénario est proposée, il faut vérifier que les illustrations seront réalisables à temps et si le programme permettra de faire les actions nécessaires sur les scènes. 
 
-Technoligies utilisées : three.js / Photoshop / MindMap
+Technologies utilisées : three.js / Photoshop / MindMap
+
+**Les fichiers du jeux sont dans la branche replit du github.**
 
 Mindmap des scénarios :
 https://mm.tt/app/map/3180555753?t=s4hBOozTjO
