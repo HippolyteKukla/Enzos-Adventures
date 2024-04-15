@@ -5,7 +5,7 @@ let currentScene = scenes[currentSceneIndex];
 export let CheminScene = [];
 
 let renderer; // Déclarez la variable renderer
-let reinitialisation = 0;
+let reinitialisation = 1;
 
 //Variables lié aux Histoires
 let TotemTomi = false;
@@ -20,6 +20,18 @@ let numerosTires = new Set();
 let timer;
 let timerRunning = false;
 let camera; // Déclarez la variable camera
+
+tabEndFind[0] = 1;
+tabEndFind[6] = 1;
+tabEndFind[9] = 1;
+tabEndFind[2] = 1;
+tabEndFind[10] = 1;
+tabEndFind[8] = 1;
+tabEndFind[4] = 1;
+tabEndFind[14] = 1;
+tabEndFind[13] = 1;
+tabEndFind[15] = 1;
+
 
 //code pour initialiser le renderer:
 renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -118,7 +130,7 @@ export function Init() {
   chargerTextureQuestion();
   chargerTextureDe();
   setTimeout(function () {
-    theEnd(60)
+    theEnd(1)
   }, 10000);
 }
 
