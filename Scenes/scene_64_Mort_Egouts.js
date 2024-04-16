@@ -13,7 +13,7 @@ const tabTextureOrColor = [
     { type: 'texture', path: 'Ressources/Images/background/mort_faim_egouts.png' },//Image
 ];
 
-const tabFonction = [{ type: 'theEnd', value: 1 }];
+const tabFonction = [{ type: 'changerscene', value: 1 }];
 
 //Fonction de Création de chaque plane. Seul l'arg scene est obligatoire.
 script.AddPlaneClickable(scene, nbPlane, tabPlaneName, undefined, undefined, undefined, undefined, undefined, undefined, tabTextureOrColor, undefined, undefined, tabFonction);

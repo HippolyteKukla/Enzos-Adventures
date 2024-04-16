@@ -5,7 +5,7 @@ let currentScene = scenes[currentSceneIndex];
 export let CheminScene = [];
 
 let renderer; // Déclarez la variable renderer
-let reinitialisation = 1;
+let reinitialisation = 0;
 
 //Variables lié aux Histoires
 let TotemTomi = false;
@@ -20,17 +20,6 @@ let numerosTires = new Set();
 let timer;
 let timerRunning = false;
 let camera; // Déclarez la variable camera
-
-tabEndFind[0] = 1;
-tabEndFind[6] = 1;
-tabEndFind[9] = 1;
-tabEndFind[2] = 1;
-tabEndFind[10] = 1;
-tabEndFind[8] = 1;
-tabEndFind[4] = 1;
-tabEndFind[14] = 1;
-tabEndFind[13] = 1;
-tabEndFind[15] = 1;
 
 
 //code pour initialiser le renderer:
@@ -130,8 +119,8 @@ export function Init() {
   chargerTextureQuestion();
   chargerTextureDe();
   setTimeout(function () {
-    theEnd(1)
-  }, 10000);
+    changerScene(1)
+  }, 15000);
 }
 
 // Fonction pour afficher une scène spécifique
@@ -152,7 +141,7 @@ export function afficherScene(
 
   console.log("CheminScene : " + CheminScene);
   renderer.render(currentScene, camera);
-  console.log(currentScene.BackSoundName)
+  
   if (currentScene.BackSoundName) {
     if (currentBackSoundName !== currentScene.BackSoundName) {
       PlayAudio(currentScene.BackSoundName, undefined, undefined, true);
@@ -176,14 +165,17 @@ export function changerScene(nouvelleSceneIndex) {
     if (
       nouvelleSceneIndex != -1 &&
       nouvelleSceneIndex != 0 &&
-      nouvelleSceneIndex != 61 &&
-      nouvelleSceneIndex != 62 &&
-      nouvelleSceneIndex != 63 &&
+      nouvelleSceneIndex != 36 &&
       nouvelleSceneIndex != CheminScene[CheminScene.length - 1]
     ) {
       CheminScene.push(nouvelleSceneIndex);
+      afficherScene(0)
+    }else if (nouvelleSceneIndex == CheminScene[CheminScene.length - 1]){
+      afficherScene(0)
     }
-    afficherScene(nouvelleSceneIndex);
+    else {
+      afficherScene(nouvelleSceneIndex);
+    }
   } else {
     throw new Error(
       "Erreur lors du changement de scène, index : " +
@@ -198,9 +190,7 @@ export function changerScene(nouvelleSceneIndex) {
 
 // Fonction pour revenir à la scène précédente
 export function revenirScene() {
-  console.log("ok")
   if (CheminScene.length > 1) {
-    console.log("ok")
     CheminScene.pop();
   } else {
     //trouve le secret Remonter dans le temps, Satan
@@ -225,11 +215,6 @@ export function adaptCam(imageWidth, imageHeight) {
   camera.aspect = aspectRatio;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
-}
-
-function theEnd(indexSceneDeFin) {
-  CheminScene.push(indexSceneDeFin);
-  changerScene(0);
 }
 
 export function EndFind(index, value = 1) {
@@ -386,11 +371,7 @@ export function AddPlaneClickable(
               plane.userData.onClick = function () {
                 changerScene(tabFonction[PlaneIndex].value); // Changer de scène lorsque le plane est cliqué
               };
-            } else if (tabFonction[PlaneIndex].type == "theEnd") {
-              plane.userData.onClick = function () {
-                theEnd(tabFonction[PlaneIndex].value);
-              };
-            } else if (tabFonction[PlaneIndex].type == "fonction") {
+            }  else if (tabFonction[PlaneIndex].type == "fonction") {
               if (tabFonction[PlaneIndex].hasArgs) {
                 plane.userData.onClick = function () {
                   tabFonction[PlaneIndex].func(...tabFonction[PlaneIndex].args);
@@ -456,10 +437,6 @@ export function AddPlaneClickable(
         if (tabFonction[PlaneIndex].type === "changerscene") {
           plane.userData.onClick = function () {
             changerScene(tabFonction[PlaneIndex].value); // Changer de scène lorsque le plane est cliqué
-          };
-        } else if (tabFonction[PlaneIndex].type == "theEnd") {
-          plane.userData.onClick = function () {
-            theEnd(tabFonction[PlaneIndex].value);
           };
         } else if (tabFonction[PlaneIndex].type === "fonction") {
           if (tabFonction[PlaneIndex].hasArgs) {
@@ -683,9 +660,9 @@ export function Timer() {
     timerRunning = true;
     if (getLastScene().name == "scene_36_Cercueil") PlayAudio("DingDong", 1, 400)
     timer = setTimeout(() => {
-      if (getLastScene().name == "scene_36_Cercueil") theEnd(37);
+      if (getLastScene().name == "scene_36_Cercueil") changerScene(37);
 
-      if (getLastScene().name == "scene_53_Foetus") theEnd(54);
+      if (getLastScene().name == "scene_53_Foetus") changerScene(54);
 
       timerRunning = false;
     }, 12000);
@@ -694,7 +671,7 @@ export function Timer() {
 
 export function lancerSort(index) {
   if (getLastScene().getObjectByName("Main").material.map == texturesMain[2]) {
-    theEnd(57);
+    changerScene(57);
   } else if (index) {
     changerScene(52);
   } else {
@@ -847,7 +824,7 @@ function CheckAnswer(clickPlane, notClickPlane, scene) {
     ReStartGame(scene);
     StopAudio(currentBackSoundName);
     PlayAudio("fin-question-qui-veut-gagner-des-millions");
-    theEnd(63);
+    changerScene(63);
   }
 }
 
@@ -963,10 +940,10 @@ export function startTimer(remainingTime, scene) {
 
       if (goodAnswers == 4) {
         ReStartGame(scene);
-        theEnd(61);
+        changerScene(61);
       } else {
         ReStartGame(scene);
-        theEnd(62);
+        changerScene(62);
       }
     }
   }, 1000); // Vérifier toutes les secondes

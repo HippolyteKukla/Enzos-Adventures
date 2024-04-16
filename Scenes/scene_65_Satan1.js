@@ -11,7 +11,7 @@ const tabTextureOrColor = [
     { type: 'texture', path: 'Ressources/Images/background/satan1.png' },//Image
 ];
 
-const tabFonction = [{ type: 'theEnd', value: 66 },];
+const tabFonction = [{ type: 'changerscene', value: 66 },];
 
 
 //Fonction de Création de chaque plane. Seul l'arg scene est obligatoire.

@@ -26,7 +26,7 @@ const tabTextureOrColor = [
 
 const tabFonction = [
   { type: null, value: null },
-  { type: "theEnd", value: 53 },
+  { type: "changerscene", value: 53 },
   { type: "changerscene", value: 56 },
 ];
 

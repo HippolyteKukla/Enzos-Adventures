@@ -26,7 +26,7 @@ const tabTextureOrColor = [
 const tabFonction = [
   { type: null, value: null },
   { type: "changerscene", value: 25 },
-  {type: "theEnd", value: 24 }
+  {type: "changerscene", value: 24 }
 ];
 
 //Fonction de Création de chaque plane. Seul l'arg scene est obligatoire.

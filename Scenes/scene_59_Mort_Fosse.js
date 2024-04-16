@@ -13,7 +13,7 @@ const tabTextureOrColor = [
   { type: "texture", path: "Ressources/Images/background/mort_fosse.png" },
 ];
 
-const tabFonction = [{ type: "theEnd", value: 1 }];
+const tabFonction = [{ type: "changerscene", value: 1 }];
 
 //Fonction de Création de chaque plane. Seul l'arg scene est obligatoire.
 script.AddPlaneClickable(

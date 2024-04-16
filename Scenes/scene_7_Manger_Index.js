@@ -26,7 +26,7 @@ const tabFonction = [
   { type: null, value: null },
   { type: null, value: null },
   { type: "changerscene", value: 11 },
-  { type: "theEnd", value: 8 },
+  { type: "changerscene", value: 8 },
 ];
 
 //Fonction de Création de chaque plane. Seul l'arg scene est obligatoire.
