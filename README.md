@@ -3,9 +3,9 @@
 
   Découvrez notre nouveau jeu d'aventure palpitant ! Avec des choix à faire à chaque étape, vous mènerez votre personnage à travers des péripéties passionnantes, du fin fond des égouts jusqu'à la chevauchée d'un dragon. Programmé sur three.js et illustré par notre équipe, plongez dans un monde captivant où vos décisions façonnent votre destinée !
 
-  L'idée originale du jeu est née au début de l'année où nous avions décidé de réaliser un jeu simpliste destiné à divertir notre ami Enzo. Nous avons commencé à élaborer le scénario et les choix sous forme de dossiers et sous-dossiers. Cependant, lors des cours d'HTML, nous avons vite réalisé le potentiel de cette idée et avons décidé de la développer davantage pour en faire un jeu plus immersif et impressionnant. En hommage à Enzo qui nous a inspiré cette idée, nous avons choisi de baptiser notre jeu de son nom.
+  L'idée originale du jeu est née au début de l'année où nous avions décidé de réaliser un jeu simpliste destiné à divertir notre ami Enzo. Nous avons commencé à élaborer le scénario et les choix sous forme de dossiers et sous-dossiers dans un explorateur de fichier. Cependant, lors des cours d'HTML, nous avons vite réalisé le potentiel de cette idée et avons décidé de la développer davantage pour en faire un jeu plus immersif et impressionnant. En hommage à Enzo qui nous a inspiré cette idée, nous avons choisi de baptiser notre jeu de son nom.
 
-  Dans ce jeu, vous incarnez un personnage sans foyer ni argent, armé seulement d'un mystérieux livre ancien. À chaque étape, vous devrez faire des choix en cliquant sur des flèches ou des objets dans des scènes illustrées et avec des bruitages. Sur la page gauche du livre, vous découvrirez les conséquences de vos actions et les choix proposés, tandis que sur la page de droite, vous verrez les fins débloquées grâce aux tampons de fin et celles qui restent à découvrir. Attention, la flèche rouge en bas du livre vous permet de revenir en arrière, mais altérer le cours du temps peut avoir des conséquences ! En effet, si votre personnage tombe malade à un moment donné, même en remontant le temps, il restera malade. 
+  Dans ce jeu, vous incarnez un personnage sans foyer ni argent, armé seulement d'une vielle montre brisée et d'un mystérieux livre trouvé dans une ruelle. À chaque étape, vous devrez faire des choix en cliquant sur des flèches ou des objets dans des scènes illustrées et avec des bruitages. Sur la page gauche du livre, vous découvrirez les conséquences de vos actions et les choix proposés, tandis que sur la page de droite, vous verrez les fins débloquées grâce aux tampons de fin et celles qui restent à découvrir ( le jeu gardera en mémoire vos fins réalisés ). Attention, la flèche rouge en bas du livre vous permet de revenir dans le passé, mais altérer le cours du temps peut avoir des conséquences ! En effet, si votre personnage tombe malade ou perd un membre à un moment donné, remonter le temps ne vous aidera pas.
 
 
 Membres de l'équipe : 
@@ -36,4 +36,4 @@ https://devbox.u-angers.fr/~leobossuet0001/
 
 
 Bugs connus :
-Dans le cas d'un ordinateur lent, le chargement des différents éléments peut ne pas être fini lors du premier affichage du jeu, un rechargement de la page suffit à régler le problème.
+Dans le cas d'un ordinateur ou d'une connexion lente, le chargement des différents éléments peut ne pas être fini lors du premier affichage du jeu, un rechargement de la page suffit à régler le problème.
