@@ -36,4 +36,6 @@ https://devbox.u-angers.fr/~leobossuet0001/
 
 
 Bugs connus :
-Dans le cas d'un ordinateur ou d'une connexion lente, le chargement des différents éléments peut ne pas être fini lors du premier affichage du jeu, un rechargement de la page suffit à régler le problème.
+  - Dans le cas d'un ordinateur ou d'une connexion lente, le chargement des différents éléments peut ne pas être fini lors du premier affichage du jeu, un rechargement de la page suffit à régler le problème.
+  - Certains sons et musiques peuvent, très rarement, ne pas s'arreter. Un rechargement de la page suffit à régler le problème. (cause inconnue)
+  - Quand l'on clique sur la flèche rouge du livre qui permet de revenir dans le temps, il peut arriver que rien ne se passe et que 2 cliques après le personnage revienne bien dans le temps. (cause inconnue car dans ces cas précis le code associé à la flèche ne s'exécute tout simplement pas)
