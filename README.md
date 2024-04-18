@@ -20,7 +20,7 @@ Corentin Piccin : Polyvalent -> Corentin a contribué sur les trois aspects du j
 
 De manière générale, nous avons tous contribué sur chaque aspect puisque les décisions étaient prises collectivement. Lorsqu'une idée de scénario est proposée, il faut vérifier que les illustrations seront réalisables à temps et si le programme permettra de faire les actions nécessaires sur les scènes. 
 
-Technologies utilisées : three.js / Photoshop / MindMap
+Technologies utilisées : JS / Html / CSS / three.js / Photoshop / MindMap
 
 **Les fichiers du jeux sont dans la branche replit du github.**
 
