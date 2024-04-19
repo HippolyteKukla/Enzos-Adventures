@@ -111,7 +111,7 @@ if (localStorage.getItem("EndFind") == null || reinitialisation) {
 
 ///----------------------------------Fonctions------------------------------------
 export function Init() {
-  adaptCam(213, 120);
+  adaptCam(213, 122);
   chargerTexte();
   chargementMainBookandCat();
   chargementTextureMainEgout();
@@ -119,7 +119,7 @@ export function Init() {
   chargerTextureQuestion();
   chargerTextureDe();
   setTimeout(function () {
-    changerScene(1)
+    changerScene(35)
   }, 15000);
 }
 
@@ -165,7 +165,7 @@ export function changerScene(nouvelleSceneIndex) {
     if (
       nouvelleSceneIndex != -1 &&
       nouvelleSceneIndex != 0 &&
-      nouvelleSceneIndex != 36 &&
+      nouvelleSceneIndex != 35 &&
       nouvelleSceneIndex != CheminScene[CheminScene.length - 1]
     ) {
       CheminScene.push(nouvelleSceneIndex);

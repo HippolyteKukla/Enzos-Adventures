@@ -3,6 +3,7 @@ const scene = new THREE.Scene();
 scene.name = "scene_36_Cercueil";
 scene.texte = "scene_36.txt";
 scene.notMain = true;
+scene.notLivre = true;
 
 const nbPlane = 2;
 const tabPlaneName = ["background", "corde"];
