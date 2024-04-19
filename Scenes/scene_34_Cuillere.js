@@ -6,14 +6,11 @@ scene.texte = "scene_34.txt";
 const nbPlane = 1;
 const tabPlaneName = ["background"];
 
-
 const tabTextureOrColor = [
   { type: "texture", path: "Ressources/Images/background/cuillere.png" },
 ];
 
-const tabFonction = [
-  { type: "changerscene", value: 35 },
-];
+const tabFonction = [{ type: "changerscene", value: 35 }];
 
 //Fonction de Création de chaque plane. Seul l'arg scene est obligatoire.
 script.AddPlaneClickable(
@@ -31,6 +28,10 @@ script.AddPlaneClickable(
   undefined,
   tabFonction,
 );
+
+scene.actualisation = function () {
+  script.PlayAudio("Choc", null, 300);
+};
 
 // Ajouter la scène à la liste des scènes disponibles
 script.addScenes(scene);

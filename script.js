@@ -119,7 +119,7 @@ export function Init() {
   chargerTextureQuestion();
   chargerTextureDe();
   setTimeout(function () {
-    changerScene(35)
+    changerScene(1)
   }, 15000);
 }
 
